@@ -10,4 +10,4 @@
 <img width="1438" alt="image" src="https://user-images.githubusercontent.com/75513525/222255269-8ed4f14a-6e72-4c91-804d-c63bd11792e7.png">
 
 ### Mid-use:
-<img width="1437" alt="image" src="https://user-images.githubusercontent.com/75513525/222110229-eb4c14e9-529e-4c7a-8dae-0c4aa10b30b3.png">
+<img width="1438" alt="image" src="https://user-images.githubusercontent.com/75513525/222255516-5cc42255-9676-4ee1-b177-3d420a19cfd6.png">
