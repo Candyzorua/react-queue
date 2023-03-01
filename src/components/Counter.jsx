@@ -11,7 +11,9 @@ function Counter(props) {
 
     function toggleServ() {
         if (serv) {
-            setCurrNum(props.fn());
+            var num = props.fn();
+            setCurrNum(num);
+            props.setCurr(num);
             setServ(false);
         } else {
             setServ(true);
