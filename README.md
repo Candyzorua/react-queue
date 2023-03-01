@@ -1,6 +1,6 @@
 # React Queue App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Deployed at https://stellular-babka-c495bc.netlify.app
 
 - A simple ticket queue application done as part of a coding interview. Made using React. 
 - Has a user terminal where the user can generate the number of the next ticket. The ticket currently being served and the last ticket to be served will also be shown.
