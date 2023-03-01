@@ -8,6 +8,7 @@ function Counter(props) {
 
     function toggleServ() {
         if (serv) {
+            setCurrNum(props.fn() + 1);
             setServ(false);
         } else {
             setServ(true);
@@ -18,7 +19,7 @@ function Counter(props) {
         <div className="card">
             <h1>Counter {props.counterNum}</h1>
             <h2>{currNum}</h2>
-            <Light avail={serv}/>
+            <Light fn={toggleServ} avail={serv}/>
         </div>
     );
 }
