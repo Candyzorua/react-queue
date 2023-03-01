@@ -3,6 +3,9 @@ import Light from "./Light"
 
 function Counter(props) {
 
+    /**
+     * Counter with clickable button to complete current task or accept new number
+     */
     const [currNum, setCurrNum] = useState(0);
     const [serv, setServ] = useState(true);
 
