@@ -9,7 +9,7 @@ function App() {
 
     function addCust() {
         setLatestNum(latestNum + 1)
-        setWaitingList([... waitingList, latestNum]);
+        setWaitingList([...waitingList, latestNum]);
     }
 
     function serveCust() {
