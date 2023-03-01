@@ -8,7 +8,7 @@ function Light(props) {
      * Returns a green light if avail is true and red if it is false
      */
     return (
-        <img onClick={props.fn} className="circle-img" src={
+        <img alt="light" onClick={props.fn} className="circle-img" src={
             props.avail ? greenImg : redImg
         }/>
     );

@@ -13,14 +13,14 @@ function App() {
     }
 
     function serveCust() {
-        if (waitingList.length != 0) {
+        if (waitingList.length !== 0) {
             setWaitingList(waitingList => waitingList.filter(num => num !== currNum));
             return currNum;
         }
     }
 
     function emptyWaitingList() {
-        return (waitingList.length == 0)
+        return (waitingList.length === 0)
     }
 
     return (
