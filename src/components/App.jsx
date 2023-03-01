@@ -15,7 +15,9 @@ function App() {
     function serveCust() {
         if (waitingList.length !== 0) {
             setWaitingList(waitingList => waitingList.filter(num => num !== currNum));
-            return currNum;
+            return (currNum + 1);
+        } else {
+            return "--";
         }
     }
 
