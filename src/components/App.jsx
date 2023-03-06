@@ -8,7 +8,6 @@ function App() {
     const [currNum, setCurrNum] = useState(0);
     var nextNum = waitingList[0];
     
-    
 
     function addCust() {
         setLatestNum(latestNum + 1)

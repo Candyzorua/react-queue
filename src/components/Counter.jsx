@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import Light from "./Light"
 
+/**
+* Counter with clickable button to complete current task or accept new number
+*/
+
 function Counter(props) {
 
-    /**
-     * Counter with clickable button to complete current task or accept new number
-     */
     const [currNum, setCurrNum] = useState(0);
     const [serv, setServ] = useState(true);
 
@@ -24,7 +25,7 @@ function Counter(props) {
         <div className="card">
             <h1>Counter {props.counterNum}</h1>
             <h2>{(currNum === 0) ? "--" : currNum}</h2>
-            <Light fn={toggleServ} avail={serv}/>
+            <Light fn={toggleServ} avail={serv} />
         </div>
     );
 }
