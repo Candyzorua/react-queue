@@ -3,37 +3,44 @@ import Counter from "./Counter";
 import CustDisplay from "./CustDisplay";
 
 function App() {
-    const [waitingList, setWaitingList] = useState([]);
     const [latestNum, setLatestNum] = useState(0);
     const [currNum, setCurrNum] = useState(0);
-    var nextNum = waitingList[0];
-    
 
+    /**
+     * increments the latest ticket number taken and returns it
+     * @returns int
+     */
     function addCust() {
         setLatestNum(latestNum + 1)
-        setWaitingList([...waitingList, latestNum]);
+        return latestNum;
     }
 
+    /**
+     * increments the current number of the customer being served and returns it
+     * @returns int
+     */
     function serveCust() {
-        if (waitingList.length !== 0) {
-            setWaitingList(waitingList => waitingList.filter(num => num !== nextNum));
-            return (nextNum + 1);
-        } else {
-            return "--";
-        }
+        if (!emptyWaitingList()) {
+            setCurrNum(currNum + 1)
+            return (currNum + 1);
+        } else return "--";
     }
 
+    /**
+     * returns true if the waiting list is empty
+      * @returns boolean
+     */
     function emptyWaitingList() {
-        return waitingList.length === 0
+        return currNum === latestNum;
     }
 
     return (
         <div>
-            <CustDisplay fn={addCust} empty={emptyWaitingList} latestServingNum={currNum} lastIssuedNum={latestNum}/>
-            <Counter fn={serveCust} setCurr={setCurrNum} counterNum="1"/>
-            <Counter fn={serveCust} setCurr={setCurrNum} counterNum="2"/>
-            <Counter fn={serveCust} setCurr={setCurrNum} counterNum="3"/>
-            <Counter fn={serveCust} setCurr={setCurrNum} counterNum="4"/>
+            <CustDisplay addCust={addCust} empty={emptyWaitingList} currNum={currNum} latestNum={latestNum} />
+            <Counter serveCust={serveCust} setCurrNum={setCurrNum} counterNum="1" />
+            <Counter serveCust={serveCust} setCurrNum={setCurrNum} counterNum="2" />
+            <Counter serveCust={serveCust} setCurrNum={setCurrNum} counterNum="3" />
+            <Counter serveCust={serveCust} setCurrNum={setCurrNum} counterNum="4" />
         </div>
     );
 }

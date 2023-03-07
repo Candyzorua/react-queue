@@ -10,7 +10,7 @@ function Light(props) {
     const redImg = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAA1BMVEX/AAAZ4gk3AAAASElEQVR4nO3BgQAAAADDoPlTX+AIVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwDcaiAAFXD1ujAAAAAElFTkSuQmCC";
     
     return (
-        <img alt="light" onClick={props.fn} className="circle-img" src={
+        <img alt="light" onClick={props.toggleServ} className="circle-img" src={
             props.avail ? greenImg : redImg
         }/>
     );
